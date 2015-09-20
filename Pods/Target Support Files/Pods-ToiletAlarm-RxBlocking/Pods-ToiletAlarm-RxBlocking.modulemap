@@ -1,0 +1,6 @@
+framework module RxBlocking {
+  umbrella header "Pods-ToiletAlarm-RxBlocking-umbrella.h"
+
+  export *
+  module * { export * }
+}
