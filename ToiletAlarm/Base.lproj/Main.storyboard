@@ -23,17 +23,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z68-fx-LSU">
+                                <rect key="frame" x="276" y="284" width="51" height="31"/>
+                                <connections>
+                                    <action selector="alarmTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V38-3u-79J"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qTg-Qa-k4O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="C3Y-TD-MUw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qTg-Qa-k4O" secondAttribute="trailing" constant="5" id="GeW-vv-g5Z"/>
                             <constraint firstItem="qTg-Qa-k4O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="Orz-ev-U04"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qTg-Qa-k4O" secondAttribute="bottom" constant="5" id="TDw-Y7-JBK"/>
+                            <constraint firstItem="z68-fx-LSU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="256" id="PFz-Cf-nmI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z68-fx-LSU" secondAttribute="bottom" constant="5" id="Xeo-wt-y9d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z68-fx-LSU" secondAttribute="trailing" constant="255" id="gQW-U6-3Md"/>
+                            <constraint firstItem="z68-fx-LSU" firstAttribute="top" secondItem="qTg-Qa-k4O" secondAttribute="bottom" constant="5" id="gR8-Qb-UST"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="alarmLabel" destination="qTg-Qa-k4O" id="dHU-s7-SWt"/>
+                        <outlet property="alarmSetting" destination="z68-fx-LSU" id="53V-my-hRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
