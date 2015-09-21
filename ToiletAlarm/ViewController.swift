@@ -13,20 +13,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var alarmLabel: UILabel!
     
     @IBOutlet weak var alarmSetting: UISwitch!
-    
-    @IBAction func alarmTouch(sender: UISwitch) {
+    var isAlarm = false
+    @IBAction func alarmTapped(sender: UISwitch) {
+        isAlarm = sender.on
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.alarmSetting.canBecomeFirstResponder()
         // Do any additional setup after loading the view, typically from a nib.
             var temp = false
             ToiletLightHouseClient.sharedInstance.isToiletOccupied.subscribeNext{ nextStatus in
             switch nextStatus {
             case OccupationStatus.Available:
-                print(self.alarmSetting.state.rawValue)
-                if temp == true{
+                if temp == true && self.isAlarm == true{
                     self.alarmLabel.text = "快去!!!"
                     self.alarmLabel.backgroundColor = UIColor.grayColor()
                     temp = false
