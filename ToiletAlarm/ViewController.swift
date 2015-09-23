@@ -16,6 +16,14 @@ class ViewController: UIViewController {
     var isAlarm = false
     @IBAction func alarmTapped(sender: UISwitch) {
         isAlarm = sender.on
+        if sender.on == false && self.alarmLabel.text == "快去!!!"{
+            self.alarmLabel.text = "Available"
+            self.alarmLabel.backgroundColor = UIColor.greenColor()
+        }
+        if sender.on == true && self.alarmLabel.text == "Available"{
+            self.alarmLabel.text = "快去!!!"
+            self.alarmLabel.backgroundColor = UIColor.grayColor()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
